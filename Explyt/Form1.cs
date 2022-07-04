@@ -54,5 +54,12 @@ namespace Explyt
         {
             
         }
+
+        public string Code
+        {
+            get { return fastColoredTextBox1.Text; }
+            set { fastColoredTextBox1.Text = value; }
+            
+        }
     }
 }

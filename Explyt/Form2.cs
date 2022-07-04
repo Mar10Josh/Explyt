@@ -18,12 +18,17 @@ namespace Explyt
             InitializeComponent();
         }
 
+        private Form1 mainForm = null;
+        public Form2(Form callingForm)
+        {
+            mainForm = callingForm as Form1;
+            InitializeComponent();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            String han = "fastColoredTextBox1";
-            String txt = "game.Players." + textBox1.Text + ":Kick(\"you were kicked. lol.\")";
-            Form1.FromChildHandle((IntPtr)Marshal.StringToHGlobalAnsi(han)).Text = txt;
+
+            this.mainForm.Code = "game.Players." + textBox1.Text + ":Kick(\"Insert KICK reason\")";
             
         }
 
