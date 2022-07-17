@@ -24,17 +24,29 @@ namespace Explyt
             mainForm = callingForm as Form1;
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            this.mainForm.Code = "game.Players." + textBox1.Text + ":Kick(\"Insert KICK reason\")";
-            
+            VisitLink("https://wearedevs.net/fourm/scripts");
+        }
+        private void VisitLink(String link)
+        {
+            //5 o Waffle
+            // Change the color of the link text by setting LinkVisited
+            // to true.
+            linkLabel1.LinkVisited = true;
+            //Call the Process.Start method to open the default browser
+            //with a URL:
+            System.Diagnostics.Process.Start(link);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            VisitLink("https://pastebin.com");
+        }
 
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VisitLink("https://pastebin.pl");
         }
     }
 }

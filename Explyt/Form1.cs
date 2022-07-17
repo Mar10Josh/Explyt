@@ -29,6 +29,8 @@ namespace Explyt
             api.LaunchExploit();
             fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
         }
+
+
         
         private void button2_Click(object sender, EventArgs e)
         {
@@ -60,6 +62,36 @@ namespace Explyt
             get { return fastColoredTextBox1.Text; }
             set { fastColoredTextBox1.Text = value; }
             
+        }
+
+        // Note the msgbox's Y is 476 when started
+ 
+
+        private void button_WOC1_Click(object sender, EventArgs e)
+        {
+            api.LaunchExploit();
+            
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            api.LaunchExploit();
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.Show();
+        }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+            if (!api.isAPIAttached())
+            {
+                
+            }
         }
     }
 }
